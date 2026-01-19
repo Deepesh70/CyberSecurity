@@ -1,0 +1,17 @@
+ciphertext.txt
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore NLTK data files
+nltk_data/
+# Ignore temporary files
+*.log
+*.tmp
+
+# Ignore output files
+Recover.txt
+Recover_bruteforce.txt
+ciphertext.txt
+decryptedtext.txt

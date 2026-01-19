@@ -8,7 +8,6 @@ def ceaser_encryption(text, key):
         cipher.append(chr(cipher_text))
     return "".join(cipher)
 
-
 file = 'plaintext.txt'
 
 if not os.path.exists(file):

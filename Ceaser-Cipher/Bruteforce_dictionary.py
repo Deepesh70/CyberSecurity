@@ -1,7 +1,6 @@
 ## without human intervention match the string with dictionary , should be > 70% matching
 
 import nltk
-
 from nltk.corpus import words
 
 dictionary = set()
@@ -33,7 +32,7 @@ def bruteforce3(cipher_text):
         percent = count/len(words_found)
         if percent > 0.7:
             return key,percent,s
-        # print(s)
+       
     return None, 0, None
 
 path = './ciphertext.txt'
@@ -44,8 +43,9 @@ with open(path, 'r') as f:
 r = bruteforce3(cipher_text)
 if r[0] is not None:
     print("Key: ", r[0])
-    print(r[2])
-    print("Percentage mtched: ",r[1]*100)
+    with open('Recover_bruteforce.txt', 'w') as f:
+        f.write(r[2])
+    print("File Created : Recover_bruteforce.txt")
 else:
     print("Percent matching: ", r[1]*100)
     print("Key Not found")

@@ -7,12 +7,9 @@ dictionary = set()
 for w in words.words():
     dictionary.add(w.lower())
 
-
 def frequency_analysis(cipher_text):
     frequency = Counter(cipher_text).most_common()
     return frequency
-
-
 
 def frequency_based_decryption(cipher_text):
     for char in most_common:
@@ -38,21 +35,19 @@ def frequency_based_decryption(cipher_text):
         
         return None, 0, None
           
-
 path = './ciphertext.txt' 
 with open(path, 'r') as f:
     cipher_text = f.read()
 
 s = frequency_analysis(cipher_text)
-print(s)
 most_common = [' ', 'e', 't', 'a', 'o', 'i']
     
-
 result = frequency_based_decryption(cipher_text)
 if result[0] is not None:
+    with open('Recover.txt', 'w') as f:
+        f.write(result[2])
     print("Key: ", result[0])
-    print(result[2])
-    print("Percentage matched: ", result[1]*100)
+    print("File Created : Recover.txt")
 else: 
     print("Percentage matched: ", result[1]*100)
     print("Key Not found")

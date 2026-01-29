@@ -66,6 +66,8 @@ if __name__ == "__main__":
     matrix = create_matrix(key)
     # print("Playfair Matrix:", matrix)
 
-encryptied_text = playfair_encrypt(matrix, 'HELLO')
+with open("plaintext.txt", "r") as file:
+        plaintext = file.read().strip()
+encryptied_text = playfair_encrypt(matrix, plaintext)
 print("Encrypted Text:", encryptied_text)
 

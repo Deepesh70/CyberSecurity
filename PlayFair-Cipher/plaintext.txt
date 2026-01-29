@@ -1,0 +1,4 @@
+Hello How are you?
+what are you doing here 
+how can i help you
+The automated decryption process successfully identifies the correct shift key by comparing the results against a standard English dictionary. However, if the text contains technical jargon like 'Python,' 'ciphertext,' or 'cryptography,' the match percentage might fluctuate. It is vital to strip punctuation—such as commas, periods, and brackets—to ensure that common words like 'process' or 'dictionary' are recognized accurately.

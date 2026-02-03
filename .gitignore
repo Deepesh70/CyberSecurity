@@ -11,7 +11,4 @@ nltk_data/
 *.tmp
 
 # Ignore output files
-Recover.txt
-Recover_bruteforce.txt
-ciphertext.txt
-decryptedtext.txt
+*.txt
